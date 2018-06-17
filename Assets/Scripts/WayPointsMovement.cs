@@ -6,8 +6,8 @@ public class WayPointsMovement : MonoBehaviour {
     public Transform Point1;
     public Transform Point2;
     Transform target;
-    public float speed;
-    public float step;
+    public float speed=8;
+    public float step=2;
 
     private void Start()
     {
@@ -30,4 +30,5 @@ public class WayPointsMovement : MonoBehaviour {
             target = Point2;
         }
     }
+    
 }

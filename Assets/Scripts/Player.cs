@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        GetComponent<Controller2D>().Jump();
         if (Health > 0)
         {
             Health -= damage;
