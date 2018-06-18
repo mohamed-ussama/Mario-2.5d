@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    float Health = 10f;
+    public float Health = 10f;
     int lives = 3;
 
 
@@ -15,27 +15,18 @@ public class Player : MonoBehaviour
     {
 
     }
-    void Update()
-    {
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            OnPlayerDeath();
-        }
-    }
+   
     public void TakeDamage(float damage)
     {
-        GetComponent<Controller2D>().Jump();
-        if (Health > 0)
-        {
-            Health -= damage;
-        }
-        else
+        Health -= damage;
+
+        if (Health <0)
         {
             if (lives > 0)
             {
                 OnPlayerDeath();
                 lives--;
+                Health = 10f;
             }
             else
             {

@@ -8,7 +8,7 @@ public class Controller2D : MonoBehaviour {
     
     Rigidbody rb;
     int layerMask ;
-    float rayDistance=1.2f;
+    float rayDistance=2f;
 
     void Start () {
 
@@ -57,6 +57,6 @@ public class Controller2D : MonoBehaviour {
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position, -transform.up* rayDistance);
+        Gizmos.DrawRay(transform.position, -transform.up* 2f);
     }
 }
